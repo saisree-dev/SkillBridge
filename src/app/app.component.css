@@ -1,0 +1,134 @@
+/* Main Container - Full Page Center */
+:host {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    background: white;
+    padding: 40px;
+    width: 450px;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+h1 {
+    text-align: center;
+    color: #4a148c;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.subtitle {
+    text-align: center;
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 30px;
+}
+
+/* Form Elements */
+label {
+    display: block;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+    outline: none;
+}
+
+select:focus {
+    border-color: #764ba2;
+}
+
+/* Skills Checkbox Section */
+.skills {
+    background: #f9f9fb;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #eee;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.skills div {
+    margin-bottom: 10px;
+}
+
+.skills label {
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    margin: 0;
+    cursor: pointer;
+}
+
+input[type="checkbox"] {
+    margin-right: 12px;
+    width: 18px;
+    height: 18px;
+    accent-color: #764ba2;
+}
+
+/* Analyze Button */
+button {
+    width: 100%;
+    margin-top: 25px;
+    padding: 15px;
+    background: #764ba2;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.1s;
+}
+
+button:hover {
+    background: #5a3490;
+    box-shadow: 0 5px 15px rgba(118, 75, 162, 0.4);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* Result Output Box */
+#output {
+    margin-top: 30px;
+    padding: 20px;
+    background: #f3f0ff;
+    border-left: 5px solid #764ba2;
+    border-radius: 5px;
+    animation: fadeIn 0.5s ease-in;
+}
+
+#output h3 {
+    margin-top: 0;
+    color: #4a148c;
+}
+
+#output p {
+    margin: 8px 0;
+    font-size: 0.95rem;
+    color: #444;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}

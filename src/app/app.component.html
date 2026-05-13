@@ -1,0 +1,30 @@
+<div class="container">
+    <h1>SkillBridge</h1>
+    <p class="subtitle">Analyze Your Skill Gap</p>
+
+    <label>Choose Target Role</label>
+    <select [(ngModel)]="selectedRole">
+        <option value="">-- Select Role --</option>
+        <option value="frontend">Frontend Developer</option>
+        <option value="backend">Backend Developer</option>
+        <option value="embedded">Embedded Engineer</option>
+    </select>
+
+    <label>Select Your Skills</label>
+    <div class="skills">
+        <div *ngFor="let skill of availableSkills">
+            <label>
+                <input type="checkbox" [(ngModel)]="userSkills[skill]"> {{skill}}
+            </label>
+        </div>
+    </div>
+
+    <button (click)="analyze()">Analyze Skill Gap</button>
+
+    <div id="output" *ngIf="result">
+        <h3>Result</h3>
+        <p><strong>Skill Match:</strong> {{result.percentage}}%</p>
+        <p><strong>Missing Skills:</strong> {{result.missing?.join(', ') || 'None'}}</p>
+        <p><strong>Roadmap:</strong> {{result.roadmap}}</p>
+    </div>
+</div>
